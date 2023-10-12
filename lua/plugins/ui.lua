@@ -44,11 +44,11 @@ return {
                         --     color = Util.fg("Statement"),
                         -- },
                         -- stylua: ignore
-                        {
-                            function() return require("noice").api.status.mode.get() end,
-                            cond = function() return package.loaded["noice"] and require("noice").api.status.mode.has() end,
-                            color = Util.fg("Constant"),
-                        },
+                        -- {
+                        --     function() return require("noice").api.status.mode.get() end,
+                        --     cond = function() return package.loaded["noice"] and require("noice").api.status.mode.has() end,
+                        --     color = Util.fg("Constant"),
+                        -- },
                         -- stylua: ignore
                         {
                             function() return "  " .. require("dap").status() end,
