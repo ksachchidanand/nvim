@@ -4,7 +4,7 @@ return {
         event = "VeryLazy",
         opts = function()
             local icons = require("lazyvim.config").icons
-            local Util = require("lazyvim.util")
+            local Ui = require("lazyvim.util.ui")
 
             vim.o.laststatus = vim.g.lualine_laststatus
             return {
@@ -53,12 +53,12 @@ return {
                         {
                             function() return "  " .. require("dap").status() end,
                             cond = function () return package.loaded["dap"] and require("dap").status() ~= "" end,
-                            color = Util.fg("Debug"),
+                            color = Ui.fg("Debug"),
                         },
                         {
                             require("lazy.status").updates,
                             cond = require("lazy.status").has_updates,
-                            color = Util.fg("Special"),
+                            color = Ui.fg("Special"),
                         },
                         {
                             "filetype",
