@@ -20,4 +20,16 @@ return {
             end,
         },
     },
+    {
+        "nvim-telescope/telescope-file-browser.nvim",
+        theme = "catppuccin",
+        version = false,
+        keys = {
+            -- { "<leader>e", "<cmd>Telescope file_browser<cr>" },
+            {
+                "<leader>e",
+                "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>",
+            },
+        },
+    },
 }
